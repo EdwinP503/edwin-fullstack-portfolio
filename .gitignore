@@ -4,7 +4,7 @@ node_modules/
 # Local environment variables
 .env
 
-# Production build directory (after deployment)
+# Production build directory
 build/
 
 # Log files

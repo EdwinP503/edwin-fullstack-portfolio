@@ -11,8 +11,8 @@ This is a personal portfolio website built with React. It showcases my projects,
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/EdwinP503/portfolio.git
-   cd portfolio
+   git clone https://github.com/EdwinP503/edwin-devs-portfolio.git
+   cd edwin-devs-portfolio
 
 2. **Install Dependencies**:
    ```bash

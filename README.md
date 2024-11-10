@@ -15,7 +15,9 @@ This is a personal portfolio website built with React. It showcases my projects,
    cd portfolio
 
 2. **Install Dependencies**:
+   ```bash
    npm install
 
-3. **Run the Development Server**:
+4. **Run the Development Server**:
+   ```bash
    npm start

@@ -1,0 +1,199 @@
+/* File: src/components/AboutMe.css */
+
+.about-me-container {
+  margin: 50px auto;
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.portrait {
+  width: 450px;
+  height: 350px; /* Fix height property */
+  border-radius: 5%;
+  margin: 20px auto;
+}
+
+/* Skills container for horizontal brick wall effect */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center the items */
+  gap: 5px; /* Gap between items */
+  margin: 40px auto; /* Margin to center the container */
+}
+
+/* Rectangular skill items */
+.skill-item {
+  width: 200px; 
+  height: 55px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  align-items: center; /* Center the icon and text */
+  background-color: #000; /* Background color */
+  color: #fff; /* Text color */
+  padding: 15px; /* Padding inside the item */
+  border-radius: 100px; /* Rounded corners */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition effects */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.skill-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  background-color: #333; /* Darker background on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+}
+
+/* Hide skill labels by default */
+.skill-label {
+  display: none; /* Hide the label by default */
+  margin-top: 10px; /* Space between icon and text */
+  font-size: 1rem; /* Font size */
+}
+
+/* Show skill labels on icon hover */
+.icon-container:hover .skill-label {
+  display: block; /* Show the label on hover */
+}
+
+.icon-container {
+  position: relative; /* Position for hover effect */
+}
+
+/* Optional: Center the icon container */
+.icon-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.timeline-year {
+  margin-bottom: 80px;
+}
+
+.timeline-year h2 {
+  color: #4a90e2;
+  margin-bottom: 30px;
+}
+
+/* Vertical timeline */
+.vertical-timeline {
+  margin: 5em auto;
+  max-width: 34.15em;
+}
+
+.milestones {
+  max-width: 34em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+}
+
+/* Milestone styling for better visibility */
+.milestones p {
+  line-height: 27px;
+  color: #ccc;
+  text-align: left;
+}
+
+.milestones h3 {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.milestones div {
+  border: 2px solid #888;
+  border-radius: 1em;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background-color: #222; /* Darker background for contrast */
+}
+
+/* Left and right alignment of milestones */
+.milestones:nth-child(odd) {
+  border-left: 3px solid #888;
+  padding-left: 3em;
+  transform: translateX(17em);
+}
+
+.milestones:nth-child(even) {
+  border-right: 3px solid #888;
+  padding-right: 3em;
+  transform: translateX(-16.8em);
+}
+
+/* Connecting lines for milestones */
+.milestones:nth-child(odd)::before,
+.milestones:nth-child(even)::before {
+  content: '';
+  background: #888;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.milestones:nth-child(odd)::before {
+  left: 0;
+}
+
+.milestones:nth-child(even)::before {
+  right: 0;
+}
+
+.milestones:nth-child(odd) div::before,
+.milestones:nth-child(even) div::before {
+  content: '';
+  background: #fff;
+  box-shadow: 0 0 0.5em #0d71fc;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.milestones:nth-child(odd) div::before {
+  left: -0.5em;
+}
+
+.milestones:nth-child(even) div::before {
+  right: -0.5em;
+}
+
+/* Ensure mobile responsiveness */
+@media screen and (max-width: 1150px) {
+  .vertical-timeline {
+    width: 80vw;
+  }
+  
+  .vertical-timeline .milestones {
+    width: 100%;
+    transform: none;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+
+  .vertical-timeline .milestones::before {
+    width: 3px;
+    height: 4em;
+    top: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vertical-timeline .milestones div::before {
+    top: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

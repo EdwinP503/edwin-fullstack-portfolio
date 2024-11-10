@@ -1,0 +1,22 @@
+/* File: src/App.css */
+
+/* Set the entire background to black */
+.App {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+}
+  
+/* Remove navbar-related styles from App.css to avoid overlap */
+/* The navbar styles should be handled entirely in Header.css */
+  
+/* Social Media Icons styling */
+.nav-item .fab {
+    font-size: 1.5em;
+    color: #f0f0f0;
+}
+  
+.nav-item .fab:hover {
+    color: #4a90e2;
+}
+  

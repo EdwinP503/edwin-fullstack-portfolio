@@ -1,0 +1,66 @@
+/* File: src/components/Header.css */
+
+/* Logo Styling */
+.navbar-brand img.logo {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease; 
+}
+
+/* Hover effect for the logo */
+.navbar-brand img.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar background color */
+.navbar {
+  background-color: #000000; /* Solid black background for the navbar */
+}
+
+/* Navbar Links Styling */
+/* Nav links color and font styling */
+.navbar-nav .nav-link {
+  color: #f0f0f0; 
+  font-size: 20px; 
+  position: relative;
+  transition: color 0.3s ease-in-out; 
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4a90e2; 
+}
+
+/* GitHub and LinkedIn Icons Styling */
+.nav-item .fab {
+  font-size: 1.8em; 
+  color: #f0f0f0; 
+  transition: transform 0.3s ease;
+}
+
+.nav-item .fab:hover {
+  transform: scale(1.1); 
+  color: #f0f0f0; 
+}
+
+/* Navbar Layout and Button Spacing */
+.navbar-nav {
+  margin-left: 25%; 
+}
+
+/* Space the buttons well */
+.nav-item {
+  margin-left: 5px;
+  margin-right: 25px;
+  white-space: nowrap;
+}
+
+/* Navbar toggle button (hamburger icon) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #f0f0f0; 
+}

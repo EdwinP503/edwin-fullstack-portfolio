@@ -21,3 +21,12 @@ This is a personal portfolio website built with React. It showcases my projects,
 4. **Run the Development Server**:
    ```bash
    npm start
+
+
+
+
+## License and Viewing Permissions
+
+This repository is available for viewing under the **Creative Commons Attribution-NoDerivs 4.0 International (CC BY-ND 4.0)** license. You are welcome to view and share the material, but please note that modifications and commercial use are not permitted.
+
+[View the License](https://creativecommons.org/licenses/by-nd/4.0/legalcode)

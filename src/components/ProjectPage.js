@@ -11,7 +11,7 @@ function ProjectPage() {
       title: "Enterprise Automation using Okta Workflows and Workato",
       period: "Jun 2024 - Aug 2024",
       organization: "Rapid7",
-      image: "./space.jpg",
+      image: "./images/space.jpg",
       summary: "Automated user account provisioning and deprovisioning across global offices, freeing up staff hours and reducing errors.",
       detailsFile: "/debrief/Rapid7.txt",
       skills: "Skills: Data Analysis, Easily Adaptable, Process Automation, Project Management, Okta Administration"
@@ -20,7 +20,7 @@ function ProjectPage() {
       title: "Back End Development of a Medical CRUD Application",
       period: "Feb 2024 - Apr 2024",
       organization: "Hack.Diversity",
-      image: "./space.jpg",
+      image: "./images/space.jpg",
       summary: "Developed back-end of a CRUD web application for medical records using the MERN stack, handling over 1000+ records.",
       detailsFile: "/debrief/Rapid7.txt",
       skills: "Skills: Project Management, Web Development, JavaScript, Team Collaboration"
@@ -29,7 +29,7 @@ function ProjectPage() {
       title: "Plant Phenotyping: Image Analysis of Pear Rootstocks",
       period: "Jun 2022 - Jul 2022",
       organization: "Washington State University",
-      image: "./space.jpg",
+      image: "./images/space.jpg",
       summary: "Increased phenotyping data collection efficiency by 60%, achieving 97% data accuracy for architectural traits in pear rootstocks.",
       detailsFile: "/debrief/Rapid7.txt",
       skills: "Skills: Data Analysis, Process Automation, Python, PlantCV"
@@ -38,7 +38,7 @@ function ProjectPage() {
       title: "Phenotyping Analysis: Pearl Millet Panicles",
       period: "Nov 2021 - Feb 2022",
       organization: "University of Massachusetts Boston",
-      image: "./space.jpg",
+      image: "./images/space.jpg",
       summary: "Automated measurement extraction from Pearl millet panicle images using the PlantCV library, increasing monitoring efficiency by 80%.",
       detailsFile: "/debrief/Rapid7.txt",
       skills: "Skills: Python, Process Automation, Problem Solving, Data Analysis"
@@ -47,7 +47,7 @@ function ProjectPage() {
       title: "Phenotypic Data Analysis with PlantCV",
       period: "Oct 2020 - Nov 2021",
       organization: "University of Massachusetts Boston",
-      image: "./space.jpg",
+      image: "./images/space.jpg",
       summary: "Developed a Python script using PlantCV to detect cranberries affected by fruit rot, helping improve breeding programs.",
       detailsFile: "/debrief/Rapid7.txt",
       skills: "Skills: Python, PlantCV"

@@ -11,7 +11,7 @@ function Header() {
       <div className="container">
         {/* Logo */}
         <Link className="navbar-brand" to="/">
-          <img src="/logow.png" alt="Edwin's Logo" className="logo" />
+          <img src="/images/logow.png" alt="Edwin's Logo" className="logo" />
         </Link>
         <button
           className="navbar-toggler"

@@ -106,7 +106,7 @@ function AboutMe() {
   return (
     <div className="about-me-container">
       <h2>Edwin Polanco</h2>
-      <img src="./portrait.jpeg" alt="Edwin" className="portrait" />
+      <img src="./images/portrait.jpeg" alt="Edwin" className="portrait" />
 
       {/* Skillset icons container */}
       <div className="skills-container">

@@ -1,10 +1,13 @@
 # Portfolio Website
 
-This is a personal portfolio website built with React. It showcases my projects, experience, and skills.
+A personal portfolio website built with React, designed to showcase my projects, experience, and skills.
 
 ## Project Overview
 
-- **Technologies**: React, CSS, JavaScript
+- **Technologies**:
+     - Frontend: React, CSS, JavaScript
+     - Backend: Node.js, Express.js, MongoDB
+     - Version Control: Git, GitHub
 - **Features**: Interactive project showcase, responsive design, user-friendly layout
 
 ## Setup and Installation
@@ -22,7 +25,7 @@ This is a personal portfolio website built with React. It showcases my projects,
    ```bash
    npm start
 
-
+Open your browser and navigate to http://localhost:3000 to view the portfolio.
 
 
 ## License and Viewing Permissions

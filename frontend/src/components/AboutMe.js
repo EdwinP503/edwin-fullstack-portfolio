@@ -85,43 +85,31 @@ function AboutMe() {
   ];
 
   const skills = [
-    { icon: faLaptopCode, label: 'Programming & Scripting' },
-    { icon: faServer, label: 'System Administration' },
-    { icon: faSitemap, label: 'Automation Platforms (Okta Workflows & Workato)' },
-    { icon: faTools, label: 'Data Analysis & Automation' },
-    { icon: faGoogle, label: 'Google Suite' },
-    { icon: faGitAlt, label: 'Git' },
-    { icon: faJira, label: 'Jira' },
-    { icon: faSlack, label: 'Slack' },
     { icon: faNodeJs, label: 'Node.js' },
     { icon: faReact, label: 'React.js' },
-    { icon: faAws, label: 'AWS' },
-    { icon: faDocker, label: 'Docker' },
     { icon: faPython, label: 'Python' },
-    { icon: faJenkins, label: 'Jenkins' },
-    { icon: faGithub, label: 'GitHub' },
-    { icon: faBitbucket, label: 'Bitbucket' },
-  ]
+    { icon: faGitAlt, label: 'Git' },
+    { icon: faTools, label: 'Automation' },
+    { icon: faServer, label: 'System Administration' },
+    { icon: faSitemap, label: 'Project Management' },
+    { icon: faSlack, label: 'Slack' },
+    { icon: faGoogle, label: 'Google Suite' },
+  ];
 
   return (
     <div className="about-me-container">
-      <h2>Edwin Polanco</h2>
-      <img src="./images/portrait.jpeg" alt="Edwin" className="portrait" />
-
       {/* Skillset icons container */}
       <div className="skills-container">
-        <div className="row">
-          {skills.map((skill, idx) => (
-            <div className="col-4 skill-item" key={idx}>
-              <div className="icon-container">
-                <FontAwesomeIcon icon={skill.icon} size="3x" />
-                <p className="skill-label">{skill.label}</p>
-              </div>
+        {skills.map((skill, idx) => (
+          <div className="skill-item" key={idx}>
+            <div className="icon-container">
+              <FontAwesomeIcon icon={skill.icon} />
+              <p className="skill-label">{skill.label}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
+      <h2>Experience Timeline</h2>
       {/* Vertical timeline */}
       <div className="vertical-timeline">
         {timelineData.map((yearData, index) => (

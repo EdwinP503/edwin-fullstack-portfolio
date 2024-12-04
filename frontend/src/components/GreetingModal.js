@@ -1,14 +1,28 @@
 // File: components/GreetingModal.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './GreetingModal.css';
 
 function GreetingModal({ setName }) {
   const [inputName, setInputName] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const savedName = localStorage.getItem('userName');
+    if (savedName) {
+      setName(savedName);
+    } else {
+      setIsVisible(true);
+    }
+  }, [setName]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setName(inputName);
+    localStorage.setItem('userName', inputName); // Save name to localStorage
+    setName(inputName); // Pass name to parent component
+    setIsVisible(false); // Hide the modal
   };
+
+  if (!isVisible) return null; // Don't render the modal if it's not visible
 
   return (
     <div className="modal-background">

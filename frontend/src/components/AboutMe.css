@@ -1,5 +1,5 @@
-/* File: src/components/AboutMe.css */
-
+/* About Me container styling */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 .about-me-container {
   margin: 50px auto;
   text-align: center;
@@ -7,66 +7,83 @@
   max-width: 1200px;
 }
 
+.about-me-container h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  line-height: 1.3; 
+  color: #eaeaea;
+  padding-top: 30px;
+}
+
+/* Profile picture styling */
 .portrait {
   width: 450px;
-  height: 350px; /* Fix height property */
+  height: 350px;
   border-radius: 5%;
   margin: 20px auto;
 }
 
-/* Skills container for horizontal brick wall effect */
+/* Skills container styling */
 .skills-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  justify-content: center; /* Center the items */
-  gap: 5px; /* Gap between items */
-  margin: 40px auto; /* Margin to center the container */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 750px; /* Limit width for paragraph-style centering */
+  margin: 30px auto;
 }
 
-/* Rectangular skill items */
+/* Individual skill item styling */
 .skill-item {
-  width: 200px; 
-  height: 55px; 
+  width: 130px;
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-  align-items: center; /* Center the icon and text */
-  background-color: #000; /* Background color */
-  color: #fff; /* Text color */
-  padding: 15px; /* Padding inside the item */
-  border-radius: 100px; /* Rounded corners */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition effects */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-}
-
-.skill-item:hover {
-  transform: scale(1.05); /* Scale up on hover */
-  background-color: #333; /* Darker background on hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
-}
-
-/* Hide skill labels by default */
-.skill-label {
-  display: none; /* Hide the label by default */
-  margin-top: 10px; /* Space between icon and text */
-  font-size: 1rem; /* Font size */
-}
-
-/* Show skill labels on icon hover */
-.icon-container:hover .skill-label {
-  display: block; /* Show the label on hover */
-}
-
-.icon-container {
-  position: relative; /* Position for hover effect */
-}
-
-/* Optional: Center the icon container */
-.icon-container {
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
-  margin-bottom: 10px;
+  position: relative;
 }
 
+/* Hover effect for skill items */
+.skill-item:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Skill label styling */
+.skill-label {
+  font-size: 0.95rem;
+  color: #fff;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Show text label on hover */
+.skill-item:hover .icon-container svg {
+  opacity: 0;
+}
+
+.skill-item:hover .skill-label {
+  opacity: 1;
+}
+
+/* Icon container styling */
+.icon-container svg {
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Timeline styling */
 .timeline-year {
   margin-bottom: 80px;
 }
@@ -76,7 +93,6 @@
   margin-bottom: 30px;
 }
 
-/* Vertical timeline */
 .vertical-timeline {
   margin: 5em auto;
   max-width: 34.15em;
@@ -89,7 +105,7 @@
   position: relative;
 }
 
-/* Milestone styling for better visibility */
+/* Milestone description styling */
 .milestones p {
   line-height: 27px;
   color: #ccc;
@@ -106,10 +122,10 @@
   border-radius: 1em;
   padding: 1.5em;
   margin-bottom: 1.5em;
-  background-color: #222; /* Darker background for contrast */
+  background-color: #222;
 }
 
-/* Left and right alignment of milestones */
+/* Left and right alignment for milestone items */
 .milestones:nth-child(odd) {
   border-left: 3px solid #888;
   padding-left: 3em;
@@ -163,7 +179,7 @@
   right: -0.5em;
 }
 
-/* Ensure mobile responsiveness */
+/* Responsiveness for smaller screens */
 @media screen and (max-width: 1150px) {
   .vertical-timeline {
     width: 80vw;
@@ -194,6 +210,19 @@
 
 @media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .skill-item {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-container svg {
+    font-size: 1.5rem;
+  }
+
+  .skill-label {
+    font-size: 0.7rem;
   }
 }

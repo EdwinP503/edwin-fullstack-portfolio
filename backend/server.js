@@ -1,18 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const path = require('path');
 const portfolioRoutes = require('./routes/portfolioRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+const mongoose = require('mongoose');
 
 // Initialize environment variables
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
 app.use(bodyParser.json());
 
-// Simple route
 app.get('/', (req, res) => {
   res.send('Backend server is running.');
 });
@@ -23,3 +24,8 @@ app.listen(PORT, () => {
 });
 
 app.use('/api/portfolio', portfolioRoutes);
+app.use('/api/contact', contactRoutes);
+
+mongoose.connect(process.env.DB_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error('MongoDB connection error:', err));

@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const path = require('path');
-const portfolioRoutes = require('./routes/portfolioRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const mongoose = require('mongoose');
 

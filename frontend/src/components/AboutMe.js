@@ -1,84 +1,69 @@
 // File: src/components/AboutMe.js
-import React from 'react';
+import React, { useState } from 'react';
 import './AboutMe.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faServer, faSitemap, faTools } from '@fortawesome/free-solid-svg-icons'; // solid icons
 import { faGoogle, faNodeJs, faReact, faAws, faDocker, faGitAlt,
-  faPython, faJenkins, faGithub, faSlack, faBitbucket, faJira } from '@fortawesome/free-brands-svg-icons'; // brand icons
+faPython, faJenkins, faGithub, faSlack, faBitbucket, faJira } from '@fortawesome/free-brands-svg-icons'; // brand icons
 
 function AboutMe() {
-  const timelineData = [
+  const [showMore, setShowMore] = useState(false);
+
+  const timelineData1 = [
     {
       milestones: [
         {
-          name: "Software Engineer Intern - Rapid7",
-          text: "Designed and implemented automated solutions as part of the Automations & Productivity team, focusing on streamlining processes and IT integrations for operational efficiency. Notable project: [Enterprise Automation using Okta Workflows and Workato]",
+          name: 'Software Engineer Intern - Rapid7',
+          text: 'Designed and implemented automated solutions as part of the Automations & Productivity team, focusing on streamlining processes and IT integrations for operational efficiency. Notable project: [Enterprise Automation using Okta Workflows and Workato]',
         }
       ]
     },
     {
       milestones: [
         {
-          name: "Print & Marketing Solutions Advisor - Staples",
-          text: "Assisted customers with shipping needs and promoted marketing solutions to small businesses, achieving high client retention.",
+          name: 'Print & Marketing Solutions Advisor - Staples',
+          text: 'Assisted customers with shipping needs and promoted marketing solutions to small businesses, achieving high client retention.',
         }
       ]
     },
     {
       milestones: [
         {
-          name: "MERN Stack Developer - Hack.Diversity",
-          text: "Developed the backend of a medical CRUD application. Notable project: [Back End Development of a medical CRUD application using the MERN stack]",
+          name: 'MERN Stack Developer - Hack.Diversity',
+          text: 'Developed the backend of a medical CRUD application. Notable project: [Back End Development of a medical CRUD application using the MERN stack]',
         }
-        
       ]
-    },
+    }
+  ];
+
+  const timelineData2 = [
     {
       milestones: [
         {
-          name: "Construction Supervisor - G.P. Carpentry & Remodeling LLC",
-          text: "Led remodeling projects and a carpentry team, improving project completion rates through effective scheduling and resource management",
+          name: 'Construction Supervisor - G.P. Carpentry & Remodeling LLC',
+          text: 'Led remodeling projects and a carpentry team, improving project completion rates through effective scheduling and resource management',
         }
-        
       ]
-    },
+    }
+  ];
+
+  const timelineData3 = [
     {
       milestones: [
         {
-          name: "Research Assistant - Washington State University",
-          text: "Automated phenotyping data collection through image analysis for object recognition. Notable project: [Plant Phenotyping: Image Analysis of Pear Rootstocks using PlantCV]",
+          name: 'Research Assistant - Washington State University',
+          text: 'Automated phenotyping data collection through image analysis for object recognition. Notable project: [Plant Phenotyping: Image Analysis of Pear Rootstocks using PlantCV]',
         }
       ]
-    },
+    }
+  ];
+
+  const timelineData4 = [
     {
       milestones: [
         {
           name: "High School Tutor - East Boston Ecumenical Community Council (EBECC)",
           text: "Provided tutoring to students at East Boston High School for Math and Computer programming basics",
-        }
-      ]
-    },
-    {
-      milestones: [
-        {
-          name: "Community Volunteer - Vecindarios Unidos/United Neighborhoods",
-          text: "Assisted low-income families in applying for rent assistance during COVID-19",
-        }
-      ]
-    },
-    {
-      milestones: [
-        {
-          name: "Research Assistant - UMass Boston",
-          text: "Analyzed cranberries for disease detection using image processing as well as automate the collection of object measurement through object recognition. Notable project: [Phenotypic Data Analysis Through Image Processing with PlantCV]",
-        }
-      ]
-    },
-    {
-      milestones: [
-        {
-          name: "Operations Administrator - FedEx Ground",
-          text: "Managed communication with customers and supported warehouse operations by optimizing data entry processes for enhanced efficiency",
         }
       ]
     }
@@ -110,18 +95,90 @@ function AboutMe() {
         ))}
       </div>
       <h2>Experience Timeline</h2>
-      {/* Vertical timeline */}
-      <div className="vertical-timeline">
-        {timelineData.map((yearData, index) => (
-          <div className="milestones">
-            {yearData.milestones.map((milestone, idx) => (
-              <div key={idx} className="milestone-dot">
-                <h3>{milestone.name}</h3>
-                <p>{milestone.text}</p>
-              </div>
-            ))}
+      <div className="timelines-container">
+        {/* First timeline */}
+        <div className="vertical-timeline">
+          <div className="timeline-start">
+            <div className="year-label">2024</div>
           </div>
-        ))}
+          {timelineData1.map((yearData, index) => (
+            <div className="milestones" key={index}>
+              {yearData.milestones.map((milestone, idx) => (
+                <div key={idx} className="milestone-dot">
+                  <h3>{milestone.name}</h3>
+                  <p>{milestone.text}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Spacer between timelines */}
+        <div className="timeline-spacer-pro">
+          <button 
+            className="read-more-btn" 
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? "Show Less" : "Read More"}
+          </button>
+        </div>
+
+        {/* Second timeline */}
+        <div className={`vertical-timeline ${showMore ? 'visible' : 'hidden'}`}>
+          <div className="timeline-start">
+            <div className="year-label">2023</div>
+          </div>
+          {timelineData2.map((yearData, index) => (
+            <div className="milestones" key={index}>
+              {yearData.milestones.map((milestone, idx) => (
+                <div key={idx} className="milestone-dot">
+                  <h3>{milestone.name}</h3>
+                  <p>{milestone.text}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Spacer between timelines */}
+        <div className="timeline-spacer"></div>
+
+        {/* Third timeline */}
+        <div className={`vertical-timeline ${showMore ? 'visible' : 'hidden'}`}>
+          <div className="timeline-start">
+            <div className="year-label">2022</div>
+          </div>
+          {timelineData3.map((yearData, index) => (
+            <div className="milestones" key={index}>
+              {yearData.milestones.map((milestone, idx) => (
+                <div key={idx} className="milestone-dot">
+                  <h3>{milestone.name}</h3>
+                  <p>{milestone.text}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Spacer between timelines */}
+        <div className="timeline-spacer"></div>
+
+        {/* Fourth timeline */}
+        <div className={`vertical-timeline ${showMore ? 'visible' : 'hidden'}`}>
+          <div className="timeline-start">
+            <div className="year-label">2021</div>
+          </div>
+          {timelineData4.map((yearData, index) => (
+            <div className="milestones" key={index}>
+              {yearData.milestones.map((milestone, idx) => (
+                <div key={idx} className="milestone-dot">
+                  <h3>{milestone.name}</h3>
+                  <p>{milestone.text}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

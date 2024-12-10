@@ -4,9 +4,11 @@
 .App {
     background-color: #000000;
     color: #ffffff;
-    min-height: 100vh;
-}
-  
+    height: 100%;  /* Ensure it takes the full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts from top */
+} 
 /* Remove navbar-related styles from App.css to avoid overlap */
 /* The navbar styles should be handled entirely in Header.css */
   

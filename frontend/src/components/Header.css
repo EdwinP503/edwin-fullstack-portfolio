@@ -34,14 +34,14 @@
 
 /* GitHub and LinkedIn Icons Styling */
 .nav-item .fab {
-  font-size: 1.8em; 
+  font-size: 1.5em; 
   color: #f0f0f0; 
   transition: transform 0.3s ease;
 }
 
 .nav-item .fab:hover {
   transform: scale(1.1); 
-  color: #f0f0f0; 
+  color: #4a90e2; 
 }
 
 /* Navbar Layout and Button Spacing */

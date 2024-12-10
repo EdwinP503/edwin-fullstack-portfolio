@@ -1,18 +1,56 @@
 /* File: src/App.css */
 
-/* Set the entire background to black */
+/* Global app container */
 .App {
-    background-color: #000000;
-    color: #ffffff;
-    height: 100%;  /* Ensure it takes the full height */
+    background-color: #000;  /* Set the background color to black */
+    color: #fff;             /* Text color is white */
+    min-height: 100vh;       /* Ensure it takes full viewport height */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: flex-start;  /* Align content at the top */
+    overflow-x: hidden;      /* Prevent horizontal overflow */
+}
+
+/* General content styling */
+.container {
+    padding-top: 10px;  /* Add space for fixed navbar */
+}
+
+/* Set up font smoothing for text rendering */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styling for routes/pages content */
+.page-content {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ensure content starts from top */
-} 
-/* Remove navbar-related styles from App.css to avoid overlap */
-/* The navbar styles should be handled entirely in Header.css */
-  
-/* Social Media Icons styling */
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+h2, h3, h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.home-page {
+    background-color: #111; 
+}
+
+.project-page {
+    background-color: #111;
+}
+
+.contact-page {
+    background-color: #111;
+}
+
 .nav-item .fab {
     font-size: 1.5em;
     color: #f0f0f0;

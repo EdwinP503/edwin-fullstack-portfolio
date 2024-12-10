@@ -1,8 +1,21 @@
 /* File: src/index.css */
 
+/* Ensure that body and html fill the entire viewport */
+html, body {
+  height: 100%;  
+  margin: 0;
+  padding: 0;
+  background-color: #000;  
+  color: #fff;           
+  font-family: Arial, sans-serif;  
+  font-size: 16px;  
+  line-height: 1.5;  
+}
+
+/* Set the background for the entire page using a pseudo-element */
 body::before {
   content: '';
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -11,23 +24,13 @@ body::before {
   z-index: -1;
 }
 
-/* Set background for entire app */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000000; /* Global black background */
-  color: #ffffff; /* Light text color */
-  font-family: Arial, sans-serif;
-  background-size: cover;
-}
-
-/* Set text smoothing for better appearance */
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Box-sizing to handle element sizing properly */
+/* Styling for all elements to use box-sizing for better layout management */
 * {
   box-sizing: border-box;
+}
+
+/* Ensure anchor tags look consistent */
+a {
+  text-decoration: none;
+  color: inherit;
 }

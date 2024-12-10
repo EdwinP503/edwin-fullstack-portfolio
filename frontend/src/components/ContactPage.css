@@ -51,3 +51,24 @@
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
+
+.contact-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page-form {
+  flex-grow: 1; /* This will ensure the form container grows and takes available space */
+}
+
+/* Adjust any extra margins or paddings */
+.contact-page-container .form-container {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Optional: Set padding for content */
+.container.my-5 {
+  padding-bottom: 50px; /* Ensure there's no large space at the bottom */
+}

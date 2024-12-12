@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "dev": "nodemon server.js",
     "lint": "echo 'Linting placeholder' && exit 0",
     "test": "jest"
   },
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
     "supertest": "^7.0.0"
   }
 }

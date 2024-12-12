@@ -31,7 +31,7 @@ function Header() {
                 <Link className="nav-link" to="/about">About Me</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <Link className="nav-link" to="/projects">Portfolio</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">Contact Me</Link>
@@ -62,7 +62,7 @@ function Header() {
                 <Link className="menu-link" to="/about" onClick={toggleMenu}>About Me</Link>
               </li>
               <li className="menu-item">
-                <Link className="menu-link" to="/projects" onClick={toggleMenu}>Projects</Link>
+                <Link className="menu-link" to="/projects" onClick={toggleMenu}>Portfolio</Link>
               </li>
               <li className="menu-item">
                 <Link className="menu-link" to="/contact" onClick={toggleMenu}>Contact Me</Link>

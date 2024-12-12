@@ -25,6 +25,10 @@
   max-width: 470px;
 }
 
+.project-card h4 {
+  color: #4a90e2;
+}
+
 .project-card img {
   width: 100%;
   height: auto; /* Maintain aspect ratio of images */

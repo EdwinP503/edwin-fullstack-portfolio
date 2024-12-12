@@ -34,3 +34,34 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Customize the scrollbar for the website */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+  height: 12px; /* Set the height of the scrollbar (horizontal scroll) */
+  scrollbar-width: thin;
+  scrollbar-color: #4a90e2 #1c1c1e;
+}
+
+/* Track styling */
+::-webkit-scrollbar-track {
+  background: #1c1c1e; /* Dark background */
+  border-radius: 10px; /* Round the edges */
+}
+
+/* Thumb styling */
+::-webkit-scrollbar-thumb {
+  background-color: #4a90e2; /* Blue thumb */
+  border-radius: 10px; /* Round the edges */
+  border: 3px solid #1c1c1e; /* Padding around thumb to give it space */
+}
+
+/* Hover effect on the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fff; /* Darker blue when hovered */
+}
+
+/* Optional: Style the scrollbar corners */
+::-webkit-scrollbar-corner {
+  background: #1c1c1e; /* Match track color */
+}

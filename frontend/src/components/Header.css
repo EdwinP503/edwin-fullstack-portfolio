@@ -21,7 +21,7 @@
 /* Nav links color and font styling */
 .navbar-nav .nav-link {
   color: #f0f0f0; 
-  font-size: 20px; 
+  font-size: 1.25rem; 
   position: relative;
   transition: color 0.3s ease-in-out; 
   font-weight: bold;

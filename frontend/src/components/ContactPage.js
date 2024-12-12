@@ -63,9 +63,9 @@ function ContactPage() {
     <div className="container my-5">
       <div className="row justify-content-center">
         <div className="col-md-8">
-          <h2 className="text-center mb-4">Get in Touch with Edwin</h2>
-          <p className="lead text-center">
-            Feel free to reach out for collaborations, inquiries, or just to say hello! I’m always excited to connect.
+          <h2 className="text-center mb-4">Contact me</h2>
+          <p className="lead">
+            Feel free to reach out for inquiries, or just to say hello! I’m always excited to connect.
           </p>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -105,7 +105,7 @@ function ContactPage() {
               {errors.message && <div className="invalid-feedback">{errors.message}</div>}
             </div>
             <div className="d-grid">
-              <button type="submit" className="btn btn-primary btn-lg">Send Message</button>
+              <button type="submit" className="btn-ab">Send Message</button>
             </div>
           </form>
           {message && !success && <div className="mt-4 alert alert-danger">{message}</div>}

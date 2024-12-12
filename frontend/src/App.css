@@ -4,7 +4,7 @@
 .App {
     background-color: #000;  /* Set the background color to black */
     color: #fff;             /* Text color is white */
-    min-height: 100vh;       /* Ensure it takes full viewport height */
+    height: 100vh;       /* Ensure it takes full viewport height */
     display: flex;
     flex-direction: column;  /* Stack content vertically */
     justify-content: flex-start;  /* Align content at the top */
@@ -51,12 +51,3 @@ h2, h3, h4 {
     background-color: #111;
 }
 
-.nav-item .fab {
-    font-size: 1.5em;
-    color: #f0f0f0;
-}
-  
-.nav-item .fab:hover {
-    color: #4a90e2;
-}
-  

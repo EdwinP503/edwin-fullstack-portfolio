@@ -5,8 +5,8 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: #000000; /* Dark background */
-    color: #ffffff; /* White text for contrast */
+    background-color: #000000;
+    color: #ffffff; 
     height: auto;
     width: 100vw;
     overflow: hidden;
@@ -28,37 +28,42 @@
     justify-content: space-between;
 }
 
-/* Title (Software Developer) */
-.title {
-    font-family: 'Aptos Display', sans-serif;
-    font-size: 1.5rem;
-    color: #4a90e2; /* Dark Blue, Text 2, lighter 50% */
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-/* Greeting (Hello, I'm Edwin Polanco) */
+/* Greeting (Tagline) */
 .greeting {
     font-family: 'Poppins', sans-serif;
-    font-size: 5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #4a90e2;
+    margin-bottom: 10px;
 }
-
+  
+/* Name (main heading) */
 .name {
     font-family: 'Poppins', sans-serif;
-    font-size: 5rem;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+  
+/* Title (Software Developer) */
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #4a90e2;
     margin-bottom: 20px;
-    text-align: left;
 }
+
 /* Intro text */
 .intro {
     font-family: 'Aptos Display', sans-serif;
     font-size: 1.25rem;
-    text-align: left;
-    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: 2.5rem;
 }
 
 /* Button Group */
@@ -66,30 +71,44 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: nowrap; /* Prevent buttons from wrapping */
 }
 
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Button */
 .btn {
+    all: unset;
+    display: inline-block;
+    text-align: center;
     padding: 12px 20px;
     font-family: 'Aptos Display', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid #4a90e2;
-    color: #ffffff;
-    border-radius: 8px;
+    color: white;
+    border-radius: 20px !important;
     background-color: transparent;
     width: 150px;
+    box-sizing: border-box;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #4a90e2; /* Highlight with blue */
-    color: #000000; /* Contrast text on hover */
-    transform: translateY(-5px); /* Lift effect */
+    background-color: #4a90e2;
+    color: black; 
+    transform: translateY(-5px); 
 }
 
 /* Portrait Section Styling */
 .image-section {
-    flex: 1; /* Allows the section to scale within available space */
+    flex: 1; 
     display: flex;
     justify-content: left;
     align-items: center;
@@ -100,16 +119,16 @@
 }
 
 .image-section img {
-    max-width: 100%; /* Ensures the image scales correctly */
-    max-height: 650px; /* Prevents the image from exceeding the container */
-    object-fit: contain; /* Ensures the image maintains aspect ratio */
-    border-radius: 10px; /* Optional for rounded edges */
+    max-width: 100%;  
+    max-height: 650px; 
+    object-fit: contain;  
+    border-radius: 10px;  
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
 .home-container {
-    flex-direction: column; /* Stack items */
+    flex-direction: column; 
     text-align: center;
 }
 

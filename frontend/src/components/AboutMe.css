@@ -18,11 +18,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #222;
+  background-color: #000;
   color: #fff;
   padding: 15px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
@@ -30,8 +30,8 @@
 
 /* Hover effect for skill items */
 .skill-item:hover {
-  background-color: #444;
-  transform: scale(1.05);
+  box-shadow: 0 0 23px 10px rgba(74, 144, 226, 0.7); /* Blue glow effect */
+  transform: scale(1.05); /* Slight scaling for interactivity */
 }
 
 /* Skill label styling */
@@ -68,7 +68,7 @@
 }
 
 .about-me-container h2 {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-family: 'Agency FB', sans-serif;
   margin-bottom: 4rem;
   line-height: 1.3;

@@ -9,6 +9,7 @@ faPython, faJenkins, faGithub, faSlack, faBitbucket, faJira } from '@fortawesome
 function AboutMe() {
   const [showMore, setShowMore] = useState(false);
 
+  {/* 2024 */}
   const timelineData1 = [
     {
       milestones: [
@@ -36,6 +37,7 @@ function AboutMe() {
     }
   ];
 
+  {/* 2023 */}
   const timelineData2 = [
     {
       milestones: [
@@ -47,6 +49,7 @@ function AboutMe() {
     }
   ];
 
+  {/* 2022 */}
   const timelineData3 = [
     {
       milestones: [
@@ -58,6 +61,7 @@ function AboutMe() {
     }
   ];
 
+  {/* 2021 */}
   const timelineData4 = [
     {
       milestones: [
@@ -68,6 +72,9 @@ function AboutMe() {
       ]
     }
   ];
+
+  {/* 2020 */}
+  {/* 2029 */}
 
   const skills = [
     { icon: faNodeJs, label: 'Node.js' },

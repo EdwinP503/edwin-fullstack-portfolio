@@ -69,29 +69,44 @@ function ProjectPage() {
   });
 
   return (
-    <div className="carousel-container" {...handlers}>
-      <div className="carousel">
-        {projects.map((project, idx) => (
-          <div
-            key={idx}
-            className={`carousel-card ${
-              idx === activeIndex ? 'active' : idx === (activeIndex - 1 + projects.length) % projects.length ? 'prev' : idx === (activeIndex + 1) % projects.length ? 'next' : ''
-            }`}
-            onClick={() => selectProject(idx)} // Click action to select a card
-          >
-            <img src={project.image} alt={project.title} />
-            <div className="project-details">
-              <h3>{project.title}</h3>
-              <h4>{project.organization}</h4>
-              <p>{project.period}</p>
+    <div>
+      {/* Introduction Text */}
+      <div className="project-intro">
+        <h2>Featured Projects</h2>
+        <p>
+          Explore some of my most exciting projects
+        </p>
+      </div>
+      <div className="carousel-container" {...handlers}>
+        <div className="carousel">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={`carousel-card ${
+                idx === activeIndex ? 'active' : idx === (activeIndex - 1 + projects.length) % projects.length ? 'prev' : idx === (activeIndex + 1) % projects.length ? 'next' : ''
+              }`}
+              onClick={() => selectProject(idx)} // Click action to select a card
+            >
+              <img src={project.image} alt={project.title} />
+              <div className="project-details">
+                <h3>{project.title}</h3>
+                <h4>{project.organization}</h4>
+                <p>{project.period}</p>
+              </div>
+              <div className="overlay">
+                <h4>{project.organization}</h4>
+                <p>{project.summary}</p>
+                <p>{project.skills}</p>
+              </div>
             </div>
-            <div className="overlay">
-              <h4>{project.organization}</h4>
-              <p>{project.summary}</p>
-              <p>{project.skills}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+      {/* Swipe Instruction for Mobile */}
+      <div className="swipe-instruction">
+        <p>
+          <span className="swipe-arrows">{"<<<"}</span> Swipe <span className="swipe-arrows">{"  >>>"}</span>
+        </p>
       </div>
     </div>
   );

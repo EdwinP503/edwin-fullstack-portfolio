@@ -263,8 +263,8 @@
   /* Change line */
   .vertical-timeline .milestones::before {
     width: 3px;
-    height: 2rem;
-    top: -1rem;
+    height: 4rem;
+    top: -2rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -274,5 +274,72 @@
     top: -0.5em;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .milestones div {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .milestones h3 {
+    font-size: 1.25rem;
+  }
+
+  .skill-item {
+    cursor: pointer; /* Makes it clear for users to tap */
+    animation: none; /* Disable pulsing by default */
+  }
+
+  /* Tap effect: add pulsing and show the label */
+  .skill-item:active {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .skill-item:active .icon-container svg {
+    opacity: 0; /* Hide icon on tap */
+  }
+
+  .skill-item:active .skill-label {
+    opacity: 1; /* Show label on tap */
+  }
+
+  /* Default skill-item hover effect for larger screens */
+  .skill-item:hover {
+    box-shadow: 0 0 23px 10px rgba(74, 144, 226, 0.7); /* Blue glow effect */
+    transform: scale(1.05); /* Slight scaling for interactivity */
+  }
+
+  /* Icon container styling for mobile (ensures it syncs with tap effect) */
+  .icon-container svg {
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .skill-label {
+    font-size: 0.95rem;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Add the pulsing animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.7);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+    transform: scale(1);
   }
 }

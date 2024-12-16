@@ -15,7 +15,15 @@ function AboutMe() {
       milestones: [
         {
           name: 'Software Engineer Intern - Rapid7',
-          text: 'Designed and implemented automated solutions as part of the Automations & Productivity team, focusing on streamlining processes and IT integrations for operational efficiency. Notable project: [Enterprise Automation using Okta Workflows and Workato]',
+          text: 'Designed and implemented automated solutions as part of the Automations & Productivity team, focusing on streamlining processes and IT integrations for operational efficiency.',
+        }
+      ]
+    },
+    {
+      milestones: [
+        {
+          name: 'University of Massachusetts Boston - Bachelor of Science in Information Technology',
+          text: 'Graduated with a focus on Systems Administration, completing coursework that prepared me for roles in IT operations and support.',
         }
       ]
     },
@@ -31,7 +39,7 @@ function AboutMe() {
       milestones: [
         {
           name: 'MERN Stack Developer - Hack.Diversity',
-          text: 'Developed the backend of a medical CRUD application. Notable project: [Back End Development of a medical CRUD application using the MERN stack]',
+          text: 'Contributed to the back-end development of a CRUD web application for managing medical records using the MERN Stack (MongoDB, Express, React, Node.js)',
         }
       ]
     }
@@ -39,6 +47,14 @@ function AboutMe() {
 
   {/* 2023 */}
   const timelineData2 = [
+    {
+      milestones: [
+        {
+          name: 'Delivery Driver - Developing Time Management and Customer Service',
+          text: 'Delivered packages for Uber, UberEats, Amazon Flex, and Doordash, refining time management, navigation, and customer satisfaction skills.',
+        }
+      ]
+    },
     {
       milestones: [
         {
@@ -56,6 +72,14 @@ function AboutMe() {
         {
           name: 'Research Assistant - Washington State University',
           text: 'Automated phenotyping data collection through image analysis for object recognition. Notable project: [Plant Phenotyping: Image Analysis of Pear Rootstocks using PlantCV]',
+        }
+      ]
+    },
+    {
+      milestones: [
+        {
+          name: 'FedEx Ground - Opertations Administrator',
+          text: 'Supported warehouse operations by reviewing, researching,  and entering data in multiple systems to enhance functional efficiency. Constantly communicating with customers for package pickup/drop-offs.',
         }
       ]
     }

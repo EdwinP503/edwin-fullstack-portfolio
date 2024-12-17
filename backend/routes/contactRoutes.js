@@ -2,10 +2,14 @@ const express = require('express');
 const router = express.Router();
 const { getContactSubmissions, submitContactForm } = require('../controllers/contactController');
 
-// GET route to retrieve all contact form submissions
+// @route   GET /api/contact/submissions
+// @desc    Retrieve all contact form submissions
+// @access  Public
 router.get('/submissions', getContactSubmissions);
 
-// POST route to submit a new contact form
+// @route   POST /api/contact/submit
+// @desc    Submit a new contact form
+// @access  Public
 router.post('/submit', submitContactForm);
 
 module.exports = router;

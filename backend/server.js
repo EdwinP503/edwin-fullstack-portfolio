@@ -14,16 +14,19 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(bodyParser.json());
-app.use(cors());  // Allow cross-origin requests
+app.use(bodyParser.json()); // Parse incoming JSON data
+app.use(cors()); // Allow cross-origin requests
 app.use(helmet()); // Secure HTTP headers
 
-// Simple GET route to test the server
+// Health check route
 app.get('/', (req, res) => {
-  res.send('Backend server is running.');
+  res.status(200).json({
+    success: true,
+    message: 'Backend server is running.',
+  });
 });
 
-// Use the contact routes
+// API routes
 app.use('/api/contact', contactRoutes);
 
 // MongoDB connection

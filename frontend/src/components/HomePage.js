@@ -9,8 +9,10 @@ function HomePage() {
   return (
     <div className="home-container">
       <div className="text-section">
-        <h1>Welcome To My <br></br>Portfolio</h1>
-        <p>
+        <h2 className="title">Software Developer</h2>
+        <h1 className="name">Edwin Polanco</h1>
+        <h2 className="greeting">Code with Purpose, Impact with Passion.</h2>
+        <p className="intro">
           Discover my professional journey, explore the projects I’ve worked on, and learn how you can reach out. 
           Let’s connect!
         </p>
@@ -19,7 +21,7 @@ function HomePage() {
             Learn more <br /> about me
           </button>
           <button onClick={() => navigate('/projects')} className="btn btn-outline-light">
-            Discover my <br /> projects
+            Explore <br /> my work
           </button>
           <button onClick={() => navigate('/contact')} className="btn btn-outline-light">
             Reach out <br /> to me
@@ -27,7 +29,7 @@ function HomePage() {
         </div>
       </div>
       <div className="image-section">
-        <img src="./images/headshot.jpg" alt="Professional Portrait" className="portrait" />
+        <img src={require('../assets/images/headshot.jpg')} alt="Professional Portrait" />
       </div>
     </div>
   );

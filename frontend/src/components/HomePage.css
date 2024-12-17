@@ -2,96 +2,145 @@
 
 /* General Layout */
 .home-container {
-    display: flex;
-    justify-content: space-between;
+    flex: 1;
+    justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #000000; /* Dark background */
-    color: #ffffff; /* White text for contrast */
-    padding: 0 5%; /* Add horizontal padding for better spacing */
+    background-color: #000000;
+    color: #ffffff; 
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 /* Text Section Styling */
 .text-section {
-    flex: 1 0 30%; /* 30% of the screen for text */
-    margin-left: 15%; /* 25% left margin */
-    max-width: 35%; /* Prevent stretching */
-    height: 600px;
+    flex: 1;
+    margin-top: 5%;
+    margin-left: 15%;
+    max-width: 40%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Aligns buttons and text vertically */
+    justify-content: space-between;
 }
 
-.text-section h1 {
-    font-size: 3rem;
-    font-family: 'Roboto', serif;  /* Modern sans-serif font */
+/* Greeting (Tagline) */
+.greeting {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+  
+/* Name (main heading) */
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+  
+/* Title (Software Developer) */
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4a90e2;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    line-height: 1.3; /* Improve text readability */
-    color: #eaeaea; /* Eye-catching blue */
 }
 
-.text-section p {
-    font-size: 1.2rem;
-    font-family: 'Alegreya';
-    margin-bottom: 30px;
-    line-height: 1.6;
-    text-align: justify;
-    color: #eaeaea; /* Light gray for contrast */
+/* Intro text */
+.intro {
+    font-family: 'Aptos Display', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: 2.5rem;
 }
 
 /* Button Group */
 .btn-group {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
+    flex-wrap: nowrap; /* Prevent buttons from wrapping */
 }
 
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Button */
 .btn {
+    all: unset;
+    display: inline-block;
+    text-align: center;
     padding: 12px 20px;
+    font-family: 'Aptos Display', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid #4a90e2;
-    color: #ffffff;
-    border-radius: 50px;
+    color: white;
+    border-radius: 20px !important;
     background-color: transparent;
+    width: 150px;
+    box-sizing: border-box;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #4a90e2; /* Highlight with blue */
-    color: #000000; /* Contrast text on hover */
-    transform: translateY(-5px); /* Lift effect */
+    background-color: #4a90e2;
+    color: black; 
+    transform: translateY(-5px); 
 }
 
 /* Portrait Section Styling */
 .image-section {
-    margin-right: 10%;
+    flex: 1; 
     display: flex;
-    height: 600px;
+    align-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
-.portrait {
-    max-height: 800px; /* Cap the height */
-    max-width: 100%; /* Allow scaling */
-    object-fit: cover; /* Crop the image if necessary */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8); /* Add depth */
+.image-section img {
+    max-width: 100%;  
+    max-height: 650px; 
+    object-fit: contain;  
+    border-radius: 10px;  
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-.home-container {
-    flex-direction: column; /* Stack items */
-    text-align: center;
-}
+  .home-container {
+      flex-direction: column; 
+      text-align: center;
+  }
 
-.text-section {
-    margin-left: 0;
-    margin-bottom: 30px;
-    max-width: 90%;
-}
+  .text-section {
+      margin-left: 0;
+      margin-bottom: 30px;
+      max-width: 90%;
+  }
 
-.image-section {
-    flex: 0;
-}
+  .image-section {
+      flex: 0;
+  }
 
-.portrait {
-    width: 80%;
-}
+  .btn-group {
+    display: none;
+  }
 }

@@ -1,22 +1,23 @@
 /* File: src/App.css */
 
-/* Set the entire background to black */
+/* Global app container */
 .App {
-    background-color: #000000;
-    color: #ffffff;
-    min-height: 100vh;
+    background-color: #000;  /* Set the background color to black */
+    color: #fff;             /* Text color is white */
+    height: 100vh;       /* Ensure it takes full viewport height */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: flex-start;  /* Align content at the top */
+    overflow-x: hidden;      /* Prevent horizontal overflow */
 }
-  
-/* Remove navbar-related styles from App.css to avoid overlap */
-/* The navbar styles should be handled entirely in Header.css */
-  
-/* Social Media Icons styling */
-.nav-item .fab {
-    font-size: 1.5em;
-    color: #f0f0f0;
+
+/* General content styling */
+.container {
+    padding-top: 10px;  /* Add space for fixed navbar */
 }
-  
-.nav-item .fab:hover {
-    color: #4a90e2;
+
+/* Set up font smoothing for text rendering */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-  

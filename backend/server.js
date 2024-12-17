@@ -1,25 +1,47 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
-const portfolioRoutes = require('./routes/portfolioRoutes');
+const path = require('path');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const helmet = require('helmet');
+const contactRoutes = require('./routes/contactRoutes');
 
 // Initialize environment variables
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // Parse incoming JSON data
+app.use(cors()); // Allow cross-origin requests
+app.use(helmet()); // Secure HTTP headers
 
-// Simple route
+// Health check route
 app.get('/', (req, res) => {
-  res.send('Backend server is running.');
+  res.status(200).json({
+    success: true,
+    message: 'Backend server is running.',
+  });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// API routes
+app.use('/api/contact', contactRoutes);
 
-app.use('/api/portfolio', portfolioRoutes);
+// MongoDB connection
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.connect(process.env.DB_URI)
+    .then(() => console.log('MongoDB connected'))
+    .catch((err) => console.error('MongoDB connection error:', err));
+}
+
+// Start the server
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
+
+// Export the app for testing purposes
+module.exports = app;

@@ -1,27 +1,5 @@
 /* About Me container styling */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-.about-me-container {
-  margin: 50px auto;
-  text-align: center;
-  width: 80%;
-  max-width: 1200px;
-}
-
-.about-me-container h2 {
-  font-size: 2.7rem;
-  margin-bottom: 20px;
-  line-height: 1.3; 
-  color: #eaeaea;
-  padding-top: 30px;
-}
-
-/* Profile picture styling */
-.portrait {
-  width: 450px;
-  height: 350px;
-  border-radius: 5%;
-  margin: 20px auto;
-}
 
 /* Skills container styling */
 .skills-container {
@@ -29,7 +7,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  max-width: 750px; /* Limit width for paragraph-style centering */
+  max-width: 750px;
   margin: 30px auto;
 }
 
@@ -40,11 +18,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #222;
+  background-color: #000;
   color: #fff;
   padding: 15px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
@@ -52,8 +30,8 @@
 
 /* Hover effect for skill items */
 .skill-item:hover {
-  background-color: #444;
-  transform: scale(1.05);
+  box-shadow: 0 0 23px 10px rgba(74, 144, 226, 0.7); /* Blue glow effect */
+  transform: scale(1.05); /* Slight scaling for interactivity */
 }
 
 /* Skill label styling */
@@ -83,6 +61,75 @@
   transition: opacity 0.3s ease;
 }
 
+.about-me-container {
+  margin: 3em auto;
+  text-align: center;
+  width: 90%;
+}
+
+.about-me-container h2 {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.3;
+  color: #4a90e2;
+  margin: 2rem 0;
+}
+
+/* Profile picture styling */
+.portrait {
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+  margin: 20px auto;
+}
+
+/* Hidden timelines */
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Visible timelines */
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Timeline start styling */
+.timeline-start {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
+.timeline-start .year-label {
+  font-size: 1.5rem;
+  font-family: 'Aptos Display', sans-serif;
+  font-weight: bold;
+  color: #eaeaea;
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Position the connecting line to align with the timeline */
+.timeline-start::after {
+  content: '';
+  position: absolute;
+  background: #888; /* Same color as other connecting lines */
+  width: 3px;
+  height: 50px; /* Adjust height to align with the first milestone */
+  top: 100%; /* Position the line below the year label */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Timeline styling */
 .timeline-year {
   margin-bottom: 80px;
@@ -94,35 +141,36 @@
 }
 
 .vertical-timeline {
-  margin: 5em auto;
+  margin: 1.5em auto;
   max-width: 34.15em;
 }
 
 .milestones {
-  max-width: 34em;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  width: 700px;
+  padding: 1em;
   position: relative;
 }
 
 /* Milestone description styling */
 .milestones p {
   line-height: 27px;
+  font-size: 1rem;
   color: #ccc;
   text-align: left;
 }
 
 .milestones h3 {
-  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  font-family: 'Aptos Display', sans-serif;
   text-align: left;
 }
 
 .milestones div {
   border: 2px solid #888;
   border-radius: 1em;
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background-color: #222;
+  padding: 1rem 1rem 0;
+  background-color: #000;
+  box-shadow: 0 0 23px 10px rgba(74, 144, 226, 0.7);
 }
 
 /* Left and right alignment for milestone items */
@@ -135,7 +183,7 @@
 .milestones:nth-child(even) {
   border-right: 3px solid #888;
   padding-right: 3em;
-  transform: translateX(-16.8em);
+  transform: translateX(-26.6em);
 }
 
 /* Connecting lines for milestones */
@@ -179,12 +227,33 @@
   right: -0.5em;
 }
 
+.timeline-spacer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.timeline-spacer-pro {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.read-more-btn {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #357ab7;
+}
+
 /* Responsiveness for smaller screens */
 @media screen and (max-width: 1150px) {
-  .vertical-timeline {
-    width: 80vw;
-  }
-  
   .vertical-timeline .milestones {
     width: 100%;
     transform: none;
@@ -193,36 +262,86 @@
     border: none;
   }
 
+  /* Change line */
   .vertical-timeline .milestones::before {
     width: 3px;
-    height: 4em;
-    top: -2em;
+    height: 4rem;
+    top: -2rem;
     left: 50%;
     transform: translateX(-50%);
   }
 
+  /* Change dot */
   .vertical-timeline .milestones div::before {
     top: -0.5em;
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .milestones div {
+    margin: 1rem 0;
+  }
 }
 
-@media (max-width: 768px) {
-  .skills-container {
-    gap: 10px;
+@media screen and (max-width: 768px) {
+  .milestones h3 {
+    font-size: 1.25rem;
   }
 
   .skill-item {
-    width: 80px;
-    height: 80px;
+    cursor: pointer; /* Makes it clear for users to tap */
+    animation: none; /* Disable pulsing by default */
   }
 
+  /* Tap effect: add pulsing and show the label */
+  .skill-item:active {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .skill-item:active .icon-container svg {
+    opacity: 0; /* Hide icon on tap */
+  }
+
+  .skill-item:active .skill-label {
+    opacity: 1; /* Show label on tap */
+  }
+
+  /* Default skill-item hover effect for larger screens */
+  .skill-item:hover {
+    box-shadow: 0 0 23px 10px rgba(74, 144, 226, 0.7); /* Blue glow effect */
+    transform: scale(1.05); /* Slight scaling for interactivity */
+  }
+
+  /* Icon container styling for mobile (ensures it syncs with tap effect) */
   .icon-container svg {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
   }
 
   .skill-label {
-    font-size: 0.7rem;
+    font-size: 0.95rem;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Add the pulsing animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.7);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+    transform: scale(1);
   }
 }

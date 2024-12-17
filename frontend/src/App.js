@@ -1,51 +1,35 @@
 // File: src/App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
-import HomePage from './components/HomePage';
-import ProjectPage from './components/ProjectPage';
-import ContactPage from './components/ContactPage';
-import AboutMe from './components/AboutMe';
 import Loader from './components/Loader';
-import './App.css';
+import { GlobalStyle } from './styles/globalStyles'; // Global styles using styled-components
+
+// Lazy-loaded components
+const HomePage = React.lazy(() => import('./components/HomePage'));
+const AboutMe = React.lazy(() => import('./components/AboutMe'));
+const ProjectPage = React.lazy(() => import('./components/ProjectPage'));
+const ContactPage = React.lazy(() => import('./components/ContactPage'));
 
 const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  in: {
-    opacity: 1,
-    y: 0,
-  },
-  out: {
-    opacity: 0,
-    y: -20,
-  },
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 },
 };
 
-const pageTransition = {
-  duration: 0.5,
-  ease: 'easeInOut',
-};
+const pageTransition = { duration: 0.5, ease: 'easeInOut' };
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.key}>
         <Route
           path="/"
           element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
+            <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
               <HomePage />
             </motion.div>
           }
@@ -53,13 +37,7 @@ function AnimatedRoutes() {
         <Route
           path="/about"
           element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
+            <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
               <AboutMe />
             </motion.div>
           }
@@ -67,13 +45,7 @@ function AnimatedRoutes() {
         <Route
           path="/projects"
           element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
+            <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
               <ProjectPage />
             </motion.div>
           }
@@ -81,13 +53,7 @@ function AnimatedRoutes() {
         <Route
           path="/contact"
           element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
+            <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
               <ContactPage />
             </motion.div>
           }
@@ -102,20 +68,22 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000); // Simulate 1-second load
-    return () => clearTimeout(timer); // Cleanup timer
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) return <Loader />;
 
   return (
     <Router>
+      <GlobalStyle /> {/* Apply global styles */}
       <div className="App">
         <Header />
-        <AnimatedRoutes />
+        <Suspense fallback={<Loader />}>
+          <AnimatedRoutes />
+        </Suspense>
       </div>
     </Router>
   );
 }
 
 export default App;
-

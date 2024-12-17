@@ -91,3 +91,13 @@
 .container.my-5 {
   padding-bottom: 50px; /* Ensure there's no large space at the bottom */
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

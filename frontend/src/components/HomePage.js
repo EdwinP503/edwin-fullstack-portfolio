@@ -29,7 +29,7 @@ function HomePage() {
         </div>
       </div>
       <div className="image-section">
-        <img src="./images/headshot.jpg" alt="Professional Portrait" />
+        <img src={require('../assets/images/headshot.jpg')} alt="Professional Portrait" />
       </div>
     </div>
   );

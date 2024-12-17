@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import './AboutMe.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faServer, faSitemap, faTools } from '@fortawesome/free-solid-svg-icons'; // solid icons
-import { faGoogle, faNodeJs, faReact, faAws, faDocker, faGitAlt,
-faPython, faJenkins, faGithub, faSlack, faBitbucket, faJira } from '@fortawesome/free-brands-svg-icons'; // brand icons
+import { faLaptopCode, faServer, faSitemap, faTools } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGoogle, faNodeJs, faReact, faAws, faDocker, faGitAlt,
+  faPython, faJenkins, faGithub, faSlack, faBitbucket, faJira
+} from '@fortawesome/free-brands-svg-icons';
 
 function AboutMe() {
   const [showMore, setShowMore] = useState(false);
@@ -144,7 +146,7 @@ function AboutMe() {
           ))}
         </div>
 
-        {/* Spacer between timelines */}
+        {/* Read more button */}
         <div className="timeline-spacer-pro">
           <button 
             className="read-more-btn" 

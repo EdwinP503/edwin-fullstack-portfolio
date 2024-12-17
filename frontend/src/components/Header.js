@@ -18,7 +18,7 @@ function Header() {
         <div className="container">
           {/* Logo */}
           <Link className="navbar-brand" to="/">
-            <img src="/images/logow.png" alt="Edwin's Logo" className="logo" />
+            <img src={require("../assets/images/logow.png")} alt="Edwin's Logo" className="logo" />
           </Link>
 
           {/* Default Navbar Links for Larger Screens */}
@@ -48,7 +48,7 @@ function Header() {
           </div>
 
           {/* Burger Menu for Smaller Screens */}
-          <div className="burger-icon" onClick={toggleMenu}>
+          <div className="burger-icon" onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isMenuOpen} role="button" tabIndex="0">
             <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </div>
 

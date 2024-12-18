@@ -43,8 +43,11 @@ function ContactPage() {
     }
 
     try {
+      // Get API URL from environment variable
+      const apiUrl = process.env.REACT_APP_API_URL;
+
       // Make POST request using Axios
-      const response = await axios.post('http://localhost:5000/api/contact/submit', formData);
+      const response = await axios.post(apiUrl, formData);
       setSuccess(true); // Show success message
       setMessage('Your message has been sent successfully!');
       setFormData({ name: '', email: '', message: '' });  // Clear form fields

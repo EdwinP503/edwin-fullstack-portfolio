@@ -136,9 +136,9 @@ __Backend Tests__
 ## Contact
 Feel free to connect with me for job opportunities, collaborations, or feedback:
 
-Email: edwin-polanco-it@outlook.com
-Portfolio: [edwin-boston.com](https://edwin-boston.com)
-LinkedIn: [linkedin.com/in/edwin-polanco]([https://edwin-boston.com](https://www.linkedin.com/in/edwin-polanco/))
+* Email: edwin-polanco-it@outlook.com
+* Portfolio: [edwin-boston.com](https://edwin-boston.com)
+* LinkedIn: [linkedin.com/in/edwin-polanco](https://www.linkedin.com/in/edwin-polanco/)
 
 This project demonstrates my ability to design, develop, and deploy a robust and scalable portfolio website with modern technologies and cloud services. Thank you for visiting my repository! 🙌
 

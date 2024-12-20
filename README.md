@@ -46,6 +46,7 @@ __Backend__
 
 __Testing__
 - Jest: Automated testing for the backend logic.
+  No sensitive data (e.g., API keys or MongoDB credentials) is exposed or required during testing.
 
 __Cloud Services__
 - AWS Lambda: Executes the contact form logic without the need for a server.
@@ -143,6 +144,6 @@ Feel free to connect with me for job opportunities, collaborations, or feedback:
 This project demonstrates my ability to design, develop, and deploy a robust and scalable portfolio website with modern technologies and cloud services. Thank you for visiting my repository! 🙌
 
 ## License and Viewing Permissions
-This repository is available for viewing under the **Creative Commons Attribution-NoDerivs 4.0 International (CC BY-ND 4.0)** license. You are welcome to view and share the material, but please note that modifications and commercial use are not permitted.
+This repository is available for viewing under the **Creative Commons Attribution-NoDerivs 4.0 International (CC BY-ND 4.0)** license. The use of the backend structure, serverless logic, or design must include attribution to the creator and is limited to personal, non-commercial use.
 
 [View the License](https://creativecommons.org/licenses/by-nd/4.0/legalcode)

@@ -60,7 +60,7 @@ __Frontend Architecture__
 __Serverless Contact Form Workflow__
 1. Frontend:
      - The user submits a message via the contact form.
-     - A POST request is sent to `https://api.edwin-boston.com/saveContact`.
+     - A POST request is sent to `https://api.example.com/saveContact`.
 
 2. AWS API Gateway:
      - Acts as a secure entry point for the serverless backend.
@@ -77,8 +77,8 @@ __Serverless Contact Form Workflow__
 __Frontend Setup__
 1. **Clone the Repository and navigate to the frontend folder**:
    ```bash
-   git clone https://github.com/EdwinP503/edwin-devs-portfolio.git
-   cd edwin-devs-portfolio/frontend
+   git clone https://github.com/EdwinP503/edwin-fullstack-portfolio.git
+   cd edwin-fullstack-portfolio/frontend
 
 2. **Install Dependencies**:
    ```bash
@@ -93,7 +93,7 @@ __Frontend Setup__
 __Backend Setup (MongoDB Integration)__
 1. Navigate to the backend folder:
      ```bash
-     cd edwin-devs-portfolio/backend
+     cd edwin-fullstack-portfolio/backend
 
 2. Install dependencies:
      ```bash
@@ -109,7 +109,7 @@ __Backend Setup (MongoDB Integration)__
 
 __Serverless Setup (AWS Lambda Contact Form)__
 1. Deployed the serverless function using AWS or the Serverless Framework. Follow the instructions in AWS Lambda Functions to upload `lambda-contact-handler folder` as a .zip file.
-2. Ensured the AWS API Gateway is configured with the correct endpoint: `https://api.edwin-boston.com/saveContact`.
+2. Ensured the AWS API Gateway is configured with the correct endpoint: `https://api.example/contactRoute`.
 
 ## Testing
 __Backend Tests__
